@@ -14,7 +14,6 @@ class BisectionMethod(Method):
         l, r = map(float, input().split())
         print("> Please enter your epsilon: ", end = "")
         self.EPS = float(input())
-        converge = [l]
         
         for i in range(int(1e6)):
             m = (l + r) / 2
@@ -23,10 +22,8 @@ class BisectionMethod(Method):
             fm = self.nonlinear_equation.f(m)
             if abs(fm) < self.EPS:
                 l = m
-                converge.append(m)
                 break 
             if fm * fr < 0: l = m
             elif fl * fm < 0: r = m
-            converge.append(m)
         
-        return [l, converge] if abs(self.nonlinear_equation.f(l)) < self.EPS else "There is no solution!"
+        return l if abs(self.nonlinear_equation.f(l)) < self.EPS else "There is no solution!"
