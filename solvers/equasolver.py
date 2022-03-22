@@ -1,6 +1,3 @@
-from matplotlib import pyplot as plt
-import numpy as np
-import pandas as pd
 from methods.bisection import BisectionMethod
 from methods.equaiteration import EquationIterationMethod
 from solvers.solver import Solver

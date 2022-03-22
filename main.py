@@ -1,4 +1,3 @@
-from matplotlib import pyplot as plt
 import numpy as np
 from invokers.invoker import Invoker
 from methods.newton import NewtonMethod

@@ -1,4 +1,3 @@
-import random
 from methods.method import Method
 
 
