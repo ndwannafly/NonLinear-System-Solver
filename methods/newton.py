@@ -10,7 +10,7 @@ class NewtonMethod(Method):
             self.size = max(self.size, equa.get_number_of_args())
         print("> Please enter an initial value of {} arguments: ".format(self.size))
         print("> ", end = "")
-        
+            
         values = list(map(float, input().split()))
 
         for i in range(int(1e5)):
